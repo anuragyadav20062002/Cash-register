@@ -10,7 +10,7 @@ checkButton.addEventListener("click", function validateAmounts() {
     message.style.display="none";
     if(billAmount.value>0){
         if( cashAmount.value >= billAmount.value){
-            var totalChange= cashAmount.value-billAmount.value;
+            const totalChange= cashAmount.value-billAmount.value;
             calulatedChange(totalChange);
         }
         else{
@@ -25,9 +25,8 @@ checkButton.addEventListener("click", function validateAmounts() {
 });
 
 function calulatedChange(totalChange){
-    for(let i=0;i<curreny.length;i++){
-        const numberOfNOtes= Math.trunc(calulatedChange/curreny[i]
-            );
+    for(let i=0;i<7;i++){
+        const numberOfNOtes= Math.trunc(totalChange/curreny[i]);
         totalChange= totalChange%curreny[i];
         noOfNOtes[i].innerText= numberOfNOtes;
 
