@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    width: 50vh;
+    flex-direction: column;
+}
+
+.return-table{
+    border: 1px solid black;
+}
+.td{
+    border: 1px solid black;
+}
+.th{
+    border: 1px solid black;
+}
